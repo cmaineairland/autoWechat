@@ -1,9 +1,9 @@
 {
     "listen_list": [
-        "王雷潇","女王大人"
+       
     ],
-    "LLMsApiKey": "sk-zk29226d533ebb218a48c08a7b9cf834641671fb2e36aa3a",
-    "LLMsUrl": "https://api.zhizengzeng.com/v1/",
+    "LLMsApiKey": "",
+    "LLMsUrl": "",
     "LLMsModel": "deepseek-reasoner",
     "isInit": true,
     "friendsListSearchTime": 600,
@@ -13,10 +13,10 @@
         "topic"
     ],
     "myInfo": {
-        "name": "贾前",
-        "gender": "男",
-        "birthday": "2002-10-10",
-        "location": "北京"
+        "name": "",
+        "gender": "",
+        "birthday": "",
+        "location": ""
     },
     "databaseTablesDef": {
         "friend_info": {
