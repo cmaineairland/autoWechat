@@ -1,0 +1,149 @@
+{
+    "listen_list": [
+        "王雷潇","女王大人"
+    ],
+    "LLMsApiKey": "sk-zk29226d533ebb218a48c08a7b9cf834641671fb2e36aa3a",
+    "LLMsUrl": "https://api.zhizengzeng.com/v1/",
+    "LLMsModel": "deepseek-reasoner",
+    "isInit": true,
+    "friendsListSearchTime": 600,
+    "databaseName": "AiAgent4WeChat.db",
+    "databaseTables": [
+        "friend_info",
+        "topic"
+    ],
+    "myInfo": {
+        "name": "贾前",
+        "gender": "男",
+        "birthday": "2002-10-10",
+        "location": "北京"
+    },
+    "databaseTablesDef": {
+        "friend_info": {
+            "id": {
+                "type": "INTEGER PRIMARY KEY AUTOINCREMENT",
+                "comment": "好友id"
+            },
+            "Real_Name": {
+                "type": "TEXT",
+                "comment": "真实姓名"
+            },
+            "Nick_name": {
+                "type": "TEXT",
+                "comment": "昵称"
+            },
+            "WeChat_ID": {
+                "type": "TEXT",
+                "comment": "微信号"
+            },
+            "Location": {
+                "type": "TEXT",
+                "comment": "位置信息"
+            },
+            "Remark": {
+                "type": "TEXT",
+                "comment": "备注"
+            },
+            "Signature": {
+                "type": "TEXT",
+                "comment": "个性签名"
+            },
+            "Source": {
+                "type": "TEXT",
+                "comment": "好友来源"
+            },
+            "gender": {
+                "type": "TEXT CHECK (gender IN ('男', '女', '未知') OR gender IS NULL)",
+                "comment": "性别，使用 CHECK 约束限定为 '男', '女', '未知' 或 NULL"
+            },
+            "relation": {
+                "type": "TEXT",
+                "comment": "关系描述"
+            },
+            "relationship_strength": {
+                "type": "INTEGER CHECK (relationship_strength BETWEEN 1 AND 10 OR relationship_strength IS NULL)",
+                "comment": "关系强度，范围在 1 到 10 之间，可以为空"
+            },
+            "Lunar_birthday": {
+                "type": "TEXT",
+                "comment": "农历生日"
+            },
+            "Gregorian_birthday": {
+                "type": "TEXT",
+                "comment": "公历生日"
+            },
+            "constellation": {
+                "type": "TEXT",
+                "comment": "星座"
+            },
+            "hometown": {
+                "type": "TEXT",
+                "comment": "家乡"
+            },
+            "hobbies": {
+                "type": "TEXT",
+                "comment": "兴趣爱好"
+            },
+            "commitments": {
+                "type": "TEXT",
+                "comment": "承诺事项"
+            },
+            "personality": {
+                "type": "TEXT",
+                "comment": "性格"
+            },
+            "graduation_school": {
+                "type": "TEXT",
+                "comment": "毕业院校"
+            },
+            "company": {
+                "type": "TEXT",
+                "comment": "公司"
+            },
+            "position": {
+                "type": "TEXT",
+                "comment": "职位"
+            },
+            "other_info": {
+                "type": "TEXT",
+                "comment": "其他信息"
+            }
+        },
+        "topic": {
+            "id": {
+                "type": "TEXT",
+                "comment": "话题id"
+            },
+            "friend_remark": {
+                "type": "TEXT",
+                "comment": "好友昵称"
+            },
+            "main": {
+                "type": "TEXT",
+                "comment": "主题"
+            },
+            "last_time": {
+                "type": "TEXT",
+                "comment": "话题最后对话时间"
+            }
+        },
+        "message_temp": {
+            "id": {
+                "type": "INTEGER PRIMARY KEY AUTOINCREMENT",
+                "comment": "消息模板id"
+            },
+            "content": {
+                "type": "TEXT",
+                "comment": "消息模板内容"
+            },
+            "sender": {
+                "type": "TEXT",
+                "comment": "消息模板发送者"
+            },
+            "time": {
+                "type": "TEXT",
+                "comment": "消息模板发送时间"
+            }
+        }
+    }
+}
